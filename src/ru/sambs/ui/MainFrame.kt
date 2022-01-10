@@ -70,7 +70,7 @@ class MainFrame : JFrame(){
         val functionPainter=FunctionPainter(mainPlane,funk)
         val x = {t:Double -> (t*t-1)/(t*(t+2)) }
         val y = {t:Double -> (t*t)/((t+2)*(t+1)) }
-        val paramPainter=ParamFunctionPainter(mainPlane,x,y,tMin.value as Double + 0.1,tMax.value as Double + 0.1)
+        val paramPainter = ParamFunctionPainter(x,y,mainPlane)
         val painters = mutableListOf(cartesianPainter,functionPainter,paramPainter)
         mainPanel = GraphicsPanel(painters).apply {
             background = Color.WHITE
