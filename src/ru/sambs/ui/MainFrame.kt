@@ -63,6 +63,8 @@ class MainFrame : JFrame(){
             yMinM.value as Double,
             yMaxM.value as Double
         )
+        mainPlane.tMax = tMaxM.value as Double
+        mainPlane.tMin = tMinM.value as Double
 
         val cartesianPainter = CartesianPainter(mainPlane)//отрисовка системы координат
 
